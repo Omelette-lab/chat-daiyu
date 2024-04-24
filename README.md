@@ -1,2 +1,2 @@
 # chat-daiyu
-A digital person who will imitate Daiyu's speech
+A digital person who can imitate Daiyu's speech
