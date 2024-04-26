@@ -2,6 +2,16 @@
 A digital person who can imitate Daiyu's speech
 
 
+# 快速开始
+将项目clone到本地：
+```
+https://github.com/Omelette-lab/chat-daiyu.git
+```
+打开`app.py`，直接运行：
+```
+cd chat-daiyu
+python app.py
+```
 
 # 介绍
 
