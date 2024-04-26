@@ -24,7 +24,7 @@ python app.py
 
 <br/>
 
-![截图](.\src\model.jpg)
+![截图](./src/model.jpg)
 
 # InternLM大模型微调
 
