@@ -7,10 +7,10 @@ from modelscope import snapshot_download
 model_id = 'Omelette/chat-daiyu-sovits'
 mode_name_or_path = snapshot_download(model_id, revision='master')
 model_file = "daiyu-voice_e15_s195.pth"   
-full_path = mode_name_or_path + model_file  
+full_path = mode_name_or_path + '/'+model_file   
 sovits_path = full_path
 model_file = "daiyu-voice-e12.ckpt"   
-full_path = mode_name_or_path + model_file  
+full_path = mode_name_or_path + '/'+model_file   
 gpt_path = full_path
 
 # 一些默认参数
@@ -28,20 +28,20 @@ model_id = 'AI-ModelScope/GPT-SoVITS'
 mode_name_or_path = snapshot_download(model_id, revision='master')
 
 model_file = "chinese-hubert-base"   
-full_path = mode_name_or_path + model_file   
+full_path = mode_name_or_path + '/'+model_file    
 
 cnhubert_path = full_path
 
 model_file = "chinese-roberta-wwm-ext-large"   
-full_path = mode_name_or_path + model_file  
+full_path = mode_name_or_path + '/'+model_file  
 bert_path = full_path
 
 model_file = "s2G488k.pth"   
-full_path = mode_name_or_path + model_file  
+full_path = mode_name_or_path + '/'+model_file  
 pretrained_sovits_path = full_path
 
 model_file = "s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt"   
-full_path = mode_name_or_path + model_file  
+full_path = mode_name_or_path + '/'+model_file   
 pretrained_gpt_path = full_path
 
 exp_root = "logs"
