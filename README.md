@@ -3,7 +3,7 @@ A digital person who can imitate Daiyu's speech
 
 
 # 快速开始
-将项目clone到本地：
+将项目clone到本地或开发机：
 ```
 git clone https://github.com/Omelette-lab/chat-daiyu.git
 ```
