@@ -186,7 +186,7 @@ def load_model():
     model_name_or_path = snapshot_download(model_id, revision='master')
     model = (AutoModelForCausalLM.from_pretrained(model_name_or_path,
                                                   trust_remote_code=True).to(
-                                                    torch.bfloat16)
+                                                    torch.bfloat16))
                                                     # torch.bfloat16).cuda())
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path,
                                                 trust_remote_code=True)
