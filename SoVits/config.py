@@ -9,7 +9,9 @@ mode_name_or_path = snapshot_download(model_id, revision='master')
 model_file = "daiyu-voice_e15_s195.pth"   
 full_path = mode_name_or_path + model_file  
 sovits_path = full_path
-gpt_path = "SoVits/GPT_weights/daiyu-voice-e12.ckpt"
+model_file = "daiyu-voice-e12.ckpt"   
+full_path = mode_name_or_path + model_file  
+gpt_path = full_path
 
 # 一些默认参数
 default_refer_path = "SoVits/daiyu_example.wav"
