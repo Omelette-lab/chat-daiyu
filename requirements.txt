@@ -26,7 +26,7 @@ SoundFile==0.10.3.post1
 streamlit==1.24.0
 tools==0.1.9
 # torch==2.0.0+cu117
-torchaudio==2.0.1+cu117
+# torchaudio==2.0.1+cu117
 torchmetrics==1.3.2
 tqdm==4.66.2
 transformers==4.36.2
