@@ -7,6 +7,11 @@ A digital person who can imitate Daiyu's speech
 ```
 git clone https://github.com/Omelette-lab/chat-daiyu.git
 ```
+安装相关依赖：
+```
+cd chat-daiyu
+pip install -r reqirements.txt
+```
 打开`app.py`，直接运行：
 ```
 cd chat-daiyu
@@ -161,4 +166,39 @@ python app.py
 用户通过前端界面与模型进行对话时，能够感受到与书中角色林黛玉的深入交流。模型生成的回复不仅具有林黛玉的说话风格，而且能够以她的声音进行输出，为用户带来沉浸式的阅读体验。通过这样的微调与整合工作，不仅可以展示技术的先进性，还能够让更多的人通过现代技术更深入地了解和体验《红楼梦》这部经典文学作品的魅力。
 
 
+### 测评与量化
 
+#### OpneCompass 评测
+
+- 安装 OpenCompass
+
+```powershell
+git clone https://github.com/open-compass/opencompass
+cd opencompass
+pip install -e .
+```
+
+- 下载解压数据集
+
+```powershell
+cp /share/temp/datasets/OpenCompassData-core-20231110.zip /root/opencompass/
+unzip OpenCompassData-core-20231110.zip
+```
+
+- 评测启动！
+
+```powershell
+python run.py \
+    --datasets ceval_gen \
+    --hf-path /root/daiyu-chat/final_model \
+    --tokenizer-path /root/daiyu-chat/final_model \
+    --tokenizer-kwargs padding_side='left' truncation='left'     trust_remote_code=True \
+    --model-kwargs device_map='auto' trust_remote_code=True \
+    --max-seq-len 2048 \
+    --max-out-len 16 \
+    --batch-size 2  \
+    --num-gpus 1 \
+    --debug
+```
+
+量化结果保存在
