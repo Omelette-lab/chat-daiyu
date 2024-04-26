@@ -1,7 +1,7 @@
 import sys,os
 
 import torch
-
+from modelscope import snapshot_download
 # 推理用的指定模型
 sovits_path = "SoVits/SoVITS_weights/daiyu-voice_e15_s195.pth"
 gpt_path = "SoVits/GPT_weights/daiyu-voice-e12.ckpt"
@@ -16,10 +16,26 @@ is_half = True if is_half_str.lower() == 'true' else False
 is_share_str = os.environ.get("is_share","False")
 is_share= True if is_share_str.lower() == 'true' else False
 
-cnhubert_path = "SoVits/GPT_SoVITS/pretrained_models/chinese-hubert-base"
-bert_path = "SoVits/GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large"
-pretrained_sovits_path = "SoVits/GPT_SoVITS/pretrained_models/s2G488k.pth"
-pretrained_gpt_path = "SoVits/GPT_SoVITS/pretrained_models/s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt"
+
+model_id = 'AI-ModelScope/GPT-SoVITS'
+mode_name_or_path = snapshot_download(model_id, revision='master')
+
+model_file = "chinese-hubert-base"   
+full_path = model_dir + model_file   
+
+cnhubert_path = full_path
+
+model_file = "chinese-roberta-wwm-ext-large"   
+full_path = model_dir + model_file  
+bert_path = full_path
+
+model_file = "s2G488k.pth"   
+full_path = model_dir + model_file  
+pretrained_sovits_path = full_path
+
+model_file = "s1bert25hz-2kh-longer-epoch=68e-step=50232.ckpt"   
+full_path = model_dir + model_file  
+pretrained_gpt_path = full_path
 
 exp_root = "logs"
 python_exec = sys.executable or "python"
