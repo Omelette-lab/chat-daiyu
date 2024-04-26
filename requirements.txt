@@ -10,7 +10,6 @@ anyio==4.3.0
 attrs==23.2.0
 audioread==3.0.1
 blinker==1.7.0
-brotli-python==1.0.9
 bzip2==1.0.8
 c-ares==1.19.1
 ca-certificates==2024.3.11
