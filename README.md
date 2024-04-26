@@ -1,22 +1,7 @@
 # chat-daiyu
 A digital person who can imitate Daiyu's speech
 
-# 菜谱小管家
 
-## 目录
-
-- [菜谱小管家](#菜谱小管家)
-  - [目录](#目录)
-  - [介绍](#介绍)
-  - [模型](#模型)
-  - [数据集](#数据集)
-  - [微调](#微调)
-    - [XTuner](#xtuner)
-  - [部署](#部署)
-    - [模型转换](#模型转换)
-    - [TurboMind推理+API服务](#TurboMind推理+API服务)
-    - [网页demo演示](#网页demo演示)
-  - [OpenCompass评测](#OpenCompass评测)
 
 # 介绍
 
