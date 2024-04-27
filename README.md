@@ -135,6 +135,7 @@ python app.py
 ![截图](./src/web_demo2.png)
 
 <br/>
+> 微调后的模型已上传至[chat黛玉](https://www.modelscope.cn/Omelette/chat-daiyu-internlm2.git)
 
 # GPT-SoVits语音模型微调
 
@@ -154,6 +155,8 @@ python app.py
 使用处理后的音频数据对GPT-SoVits语音模型进行微调。在微调过程中，关注模型对林黛玉声音特征的捕捉和再现能力，并调整数据集。
 
 经过对模型GPT-SoVits后，能够生成与87版红楼梦中林黛玉声音相似的语音。当用户与模型进行对话时，模型能够以林黛玉的声音进行回复，增强对话的沉浸感。
+
+> 微调后的模型已上传至[chat黛玉语音](https://www.modelscope.cn/Omelette/chat-daiyu-sovits.git)
 
 # 整合与交互
 
