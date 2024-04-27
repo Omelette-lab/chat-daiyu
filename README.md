@@ -3,6 +3,12 @@ A digital person who can imitate Daiyu's speech
 
 
 # 快速开始
+
+新建一个环境
+```
+conda create --name daiyu
+conda activate daiyu
+```
 将项目clone到本地或开发机：
 ```
 git clone https://github.com/Omelette-lab/chat-daiyu.git
