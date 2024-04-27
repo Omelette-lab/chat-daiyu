@@ -30,28 +30,18 @@ import SoVits.config as global_config
 import tempfile
 
 g_config = global_config.Config()
-
-
 parser = argparse.ArgumentParser(description="GPT-SoVITS api")
-
 parser.add_argument("-s", "--sovits_path", type=str, default=g_config.sovits_path, help="SoVITS模型路径")
 parser.add_argument("-g", "--gpt_path", type=str, default=g_config.gpt_path, help="GPT模型路径")
-
-
 parser.add_argument("-dr", "--default_refer_path", type=str, default=g_config.default_refer_path, help="默认参考音频路径")
 parser.add_argument("-dt", "--default_refer_text", type=str, default=g_config.default_refer_text, help="默认参考音频文本")
 parser.add_argument("-dl", "--default_refer_language", type=str, default=g_config.default_refer_language, help="默认参考音频语种")
-
 parser.add_argument("-d", "--device", type=str, default=g_config.infer_device, help="cuda / cpu / mps")
 parser.add_argument("-fp", "--full_precision", action="store_true", default=False, help="覆盖config.is_half为False, 使用全精度")
 parser.add_argument("-hp", "--half_precision", action="store_true", default=False, help="覆盖config.is_half为True, 使用半精度")
-
-
 parser.add_argument("-hb", "--hubert_path", type=str, default=g_config.cnhubert_path, help="覆盖config.cnhubert_path")
 parser.add_argument("-b", "--bert_path", type=str, default=g_config.bert_path, help="覆盖config.bert_path")
-
 args = parser.parse_args()
-
 sovits_path = args.sovits_path
 gpt_path = args.gpt_path
 
