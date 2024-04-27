@@ -134,7 +134,6 @@ python app.py
 
 ![截图](./src/web_demo2.png)
 
-<br/>
 > 微调后的模型已上传至[chat黛玉](https://www.modelscope.cn/models/Omelette/chat-daiyu-internlm2/files)
 
 # GPT-SoVits语音模型微调
